@@ -2,15 +2,26 @@
         
 function showHome()
 {
-    /*
-        loop through all creatures
+    /*  loop through all creatures
         
         if creature lives on land, background color green
         if creature lives in water, blue
-        if creature lives in air, yellow
-        
-        */
-        alert("showHome()");
+        if creature lives in air, yellow */
+
+        document.querySelectorAll("div.creature").forEach(el => {
+            let myHome = el.dataset.home;
+            switch(myHome){
+                case "land":
+                    el.style.backgroundColor = "green";
+                break;
+                case "water":
+                    el.style.backgroundColor = "blue";
+                break;
+                case "air":
+                    el.style.backgroundColor = "yellow";
+                break;
+            }
+        });
     
 }//end showHome()
 
@@ -18,11 +29,23 @@ function showType()
 {
     /*
         loop through all creatures
-        
         if creature is an animal, border color solid red
         if creature is an insect, border color is dashed orange
     */
-    alert("showType()");
+        document.querySelectorAll("div.creature").forEach(el => {
+            let myType = el.dataset.creatureType;
+            switch(myType){
+                case "animal":
+                    el.style.backgroundColor = "3px solid red";
+                break;
+                case "water":
+                    el.style.backgroundColor = "bl3px dashed orange";
+                break;
+            }
+        });
+
+
+
 }//end showType()
 
 function clearAll()
@@ -34,5 +57,8 @@ function clearAll()
         clear background color to white
         
     */
-    alert("clearAll()");
+        document.querySelectorAll("div.creature").forEach(function(el){
+        el.style.backgroundColor = "#FFF";
+        el.style.border = "1px solid #000";
+    });
 }//end clearAll()
