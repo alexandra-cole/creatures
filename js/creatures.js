@@ -39,7 +39,7 @@ function showType()
                     el.style.backgroundColor = "3px solid red";
                 break;
                 case "water":
-                    el.style.backgroundColor = "bl3px dashed orange";
+                    el.style.backgroundColor = "3px dashed orange";
                 break;
             }
         });
