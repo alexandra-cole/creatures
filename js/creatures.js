@@ -36,10 +36,10 @@ function showType()
             let myType = el.dataset.creatureType;
             switch(myType){
                 case "animal":
-                    el.style.backgroundColor = "3px solid red";
+                    el.style.border = "3px solid red";
                 break;
-                case "water":
-                    el.style.backgroundColor = "3px dashed orange";
+                case "insect":
+                    el.style.border = "3px dashed orange";
                 break;
             }
         });
